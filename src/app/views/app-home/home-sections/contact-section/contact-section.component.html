@@ -1,0 +1,73 @@
+<section class="container contact-section pb-1" id="contact-section">
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutWrap="nowrap" fxLayoutGap="30px">
+     <div fxFlex="50" class="wow bounceIn">
+        <div class="section-content">
+           <h3 class="section-title" data-wow-delay="0.5s" class="col wow bounce">
+              Contact Us - Miss Bronze Ireland
+           </h3>
+           <p class="mt-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rhoncus ultricies nibh, vitae sodales purus.
+              Aenean volutpat ullamcorper cursus. Duis tristique sit amet augue ac vestibulum.
+           </p>
+           <mat-divider></mat-divider>
+           <div flexLayout="column" class=" mx-1">
+              <mat-icon>place</mat-icon>
+              <span fxFlex="8px"></span>
+              <strong>1234 SOME AVENUE, Ireland, Cork 56789</strong>
+           </div>
+           <div flexLayout="column" class="mb-1">
+              <mat-icon>email</mat-icon>
+              <span fxFlex="8px"></span>
+              <strong>info@missbronzeireland.com</strong>
+           </div>
+           <div flexLayout="column">
+              <mat-icon>phone</mat-icon>
+              <span fxFlex="8px"></span>
+              <strong>(123) 456-7890</strong>
+           </div>
+        </div>
+     </div>
+     <div fxFlex="50" class="section-content wow bounceIn" >
+        <h3 class="section-title" data-wow-delay="0.5s" class="col wow bounce">
+           Say Hello!
+        </h3>
+        <form [formGroup]="contactForm" class="mt-1">
+           <div fxLayout="row wrap" fxLayout.lt-md="column">
+              <div fxFlex="100">
+                 <div class="pb-1">
+                    <mat-form-field class="w-100">
+                       <input matInput name="name" [formControl]="contactForm.controls['name']" placeholder="Your Name">
+                    </mat-form-field>
+                    <small *ngIf="contactForm.controls.name.touched && contactForm.controls.name.errors?.required" class="mat-color-warn">Name is required</small>
+                 </div>
+                 <div class="pb-1">
+                    <mat-form-field class="w-100">
+                       <input matInput name="email" [formControl]="contactForm.controls['email']" placeholder="Your Email">
+                    </mat-form-field>
+                    <small *ngIf="contactForm.controls.email.touched && contactForm.controls.email.errors?.email" class="mat-color-warn">Invalid Email</small>
+                 </div>
+              </div>
+              <div fxFlex="100">
+                 <div class="pb-1">
+                    <mat-form-field class="w-100">
+                       <input matInput name="subject" [formControl]="contactForm.controls['subject']" placeholder="Subject">
+                    </mat-form-field>
+                    <small *ngIf="contactForm.controls.subject.touched && contactForm.controls.subject.errors?.required" class="mat-color-warn">Subject is required</small>
+                 </div>
+                 <div class="pb-1">
+                    <mat-form-field class="w-100">
+                       <textarea matInput row="8" name="message" [formControl]="contactForm.controls['message']" placeholder="Message"></textarea>
+                    </mat-form-field>
+                    <small *ngIf="contactForm.controls.message.touched && contactForm.controls.message.errors?.required" class="mat-color-warn">Message is required</small>
+                 </div>
+              </div>
+              <div fxFlex="100">
+                 <button mat-raised-button color="primary" [disabled]="!contactForm.valid">
+                    <mat-icon>send</mat-icon>
+                 </button>
+              </div>
+           </div>
+        </form>
+     </div>
+  </div>
+</section>

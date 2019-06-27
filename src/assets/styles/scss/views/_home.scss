@@ -1,0 +1,237 @@
+.home-app {
+    min-height: 100vh;
+}
+.section-content{
+    padding-top: 90px;
+    padding-bottom: 50px;
+    h3 {
+        position: relative;
+        color: #333;
+        font-size: 30px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+     
+    p {
+        color: #333;
+    }
+
+    .mat-divider {
+        margin: 1rem 0;
+    }
+}
+
+.section-content h3:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0px;
+    width: 60px;
+    height: 1px;
+    background-color: #094276;
+}
+
+@media (max-width: 992px){
+    .section-content{
+        padding-top: 40px;
+        padding-bottom: 0px;
+    }
+}
+
+/* Services Section */
+.our-services {
+    padding-bottom: 2.5rem;
+}
+[mat-card-icon] {
+    font-size: 64px !important;
+    height: 64px !important;
+    width: 64px !important;
+    transition: all .3s ease;
+}
+.home-fancy-card {
+    border-top: 2px solid #212121;
+    transition: all .3s ease;
+    cursor: pointer;
+    box-shadow: 0 10px 16px rgba(0,0,0,.2) !important;
+}
+
+.home-fancy-card:hover {
+    border-top: 2px solid #326c9e;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12) !important;
+}
+.home-fancy-card:hover [mat-card-icon] {
+    color: #326c9e;
+}
+.home-fancy-card .description {
+    font-size: 15px;
+    color: #616161;
+}
+/* END Services Section */
+
+/* ========= Purchase Now ============= */
+.purchase-now {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.purchase-now p {
+    color: #dfdfdf;
+}
+/* ========= End Purchase Now ============= */
+
+/* ========= Available On ============= */
+.availableon-section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: #313131 !important;
+    color: #ffffff !important;
+}
+
+.availableon-section p {
+    color: #dfdfdf;
+    font-weight: 300;
+}
+
+.download-now img {
+    width: 100%;
+}
+
+.available-title {
+    padding-top: 75px;
+}
+.available-title h2 {
+    
+    color: #fff;
+    font-size: 30px;
+}
+.available-title p {
+    color: #B5B5B5;
+}
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+.available-on-item {
+    text-align: center;
+    border-left: 1px solid #094276;
+    position: relative;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+    
+}
+.available-on-item:hover {
+    background-color: #121212;
+}
+.available-on-item img {
+    color: #129CF3;
+    text-align: center;
+    opacity: 1;
+    height: 40px;
+    width: 40px;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+.available-on-item:hover img {
+    opacity: 0;
+}
+.available-on-inner {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+     transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+}
+.available-on-inner h2 {
+    text-align: center;
+    color: #D7DADB;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.available-on-item:hover div.available-on-inner {
+    opacity: 1;
+}
+/* ========= End Available On ============= */
+
+/* ========= Contact Section ============== */
+.contact-section  {
+    strong, mat-icon {
+        color: #54595f;
+    }
+}
+/* ========= End Contact Section =========== */
+.testimonail-carousel{
+    width: 100%;
+    position: relative;
+    
+    .myPoint {
+        position: relative !important;
+    }
+    .test-c-left {
+        position: absolute !important;
+        left: 0px;
+        top: 30%;
+        
+    }
+    .test-c-right {
+        position: absolute !important;
+        right: 0px;
+        top: 30%;
+        z-index: 99;
+    }
+    .tile{
+        box-shadow: none !important;
+    }
+    .item { 
+        .mat-card {
+          margin: 0 4px !important;
+          .mat-card-content {
+            position: relative;
+            padding: 2rem;
+            min-height: 360px; // Adjust height as your need
+          }
+          .company-logo {
+           padding-bottom: 24px;
+          }
+          .text {
+            position: relative;
+            font-size: 1rem;
+            color: rgba(0,0,0, .64);
+            padding-bottom: 25px;
+            min-height: 240px;
+            margin: 0;
+          }
+          .user-detail {
+            position: absolute;
+            bottom: 25px;
+            left: 32px;
+            right: 0;
+            margin: auto;
+            .user-photo {
+              float: left;
+              margin-right: 8px;
+            }
+            .user-title {
+              font-size: 1rem;
+              float: left;
+              width: calc(100% - 56px)
+            }
+            .user-subtitle {
+              float: left;
+      
+            }
+          }
+          
+        }
+      }
+
+}
+
+/* ========= Testimonails Section ========== */
+

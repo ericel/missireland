@@ -1,0 +1,44 @@
+<section class="light-gray w-100" id="testimonials-section">
+    <div class="container">
+       <div fxLayout="row" fxLayout.lt-md="column" fxLayoutWrap="nowrap" fxLayoutGap="30px">
+          <div fxFlex="30" class="col wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
+             <div class="section-content">
+                <h3 class="section-title" data-wow-delay="0.5s" class="col wow bounce">
+                   Our Sponsors - Awesomeness
+                </h3>
+                <p class="mt-2">
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rhoncus ultricies nibh, vitae sodales purus.
+                   Aenean volutpat ullamcorper cursus. Duis tristique sit amet augue ac vestibulum.
+                </p>
+             </div>
+          </div>
+          <div fxFlex="70" class="col wow fadeInRight section-content" data-wow-duration="1s" data-wow-delay=".5s">
+             <ngu-carousel class="testimonail-carousel"  #myCarousel [inputs]="carouselOptions" [dataSource]="items">
+             <ngu-tile *nguCarouselDef="let item; let i = index; let ani = animate" [@slider]="ani" > <!--  PLease this animation to this tile to see animation. stackblitz have error with animations -->
+             <mat-card class="p-1">
+                <mat-card-content class="">
+                   <img class="company-logo" [src]="item.logo">
+                   <p class="text">{{item.text}}</p>
+                   <div class="user-detail">
+                      <span class="toolbar-avatar md user-photo"><img [src]="item.photo" alt=""></span>
+                      <span class="user-title">{{item.title}}</span>
+                      <span class="user-subtitle text-muted">{{item.subtitle}}</span>
+                   </div>
+                </mat-card-content>
+             </mat-card>
+             </ngu-tile>
+             <button mat-fab color="default" NguCarouselPrev class="test-c-left" [style.opacity]="myCarousel.isFirst ? 0.5:1">
+                <mat-icon>keyboard_arrow_left</mat-icon>
+             </button>
+             <button mat-fab color="default" NguCarouselNext class="test-c-right" [style.opacity]="myCarousel.isLast ? 0.5:1">
+                <mat-icon>keyboard_arrow_right</mat-icon>
+             </button>
+             <ul class="myPoint" NguCarouselPoint>
+                <li *ngFor="let i of myCarousel.pointNumbers; let i = index"  [class.active]="i==myCarousel.activePoint" (click)="myCarousel.moveTo(i)"
+                [style.background]="'url(' + items[i] + ')'"></li>
+             </ul>
+             </ngu-carousel>
+          </div>
+       </div>
+    </div>
+ </section>

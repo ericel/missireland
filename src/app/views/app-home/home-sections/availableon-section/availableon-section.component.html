@@ -1,0 +1,27 @@
+<!-- Available On Section -->
+<section class="availableon-section" id="downloadapp">
+  <div class="container">
+     <div fxLayout="row" fxLayout.lt-md="column" fxLayoutWrap="nowrap" fxLayoutGap="20px">
+        <div fxFlex="55" class="col wow fadeInLeftBig" data-wow-duration="1s">
+           <h2>Available On. Download App</h2>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nam, illum et quis officiis beatae.</p>
+        </div>
+        <div fxFlex="22" fxLayoutAlign="center center" class="col wow fadeInRightBig available-on-item" data-wow-duration="1s">
+           <button mat-icon-button  color="accent" (click)="downloadIos()">
+              <div class="available-on-inner">
+                 <h2>IOS</h2>
+              </div>
+              <img  src="assets/images/apple.png">
+           </button>
+        </div>
+        <div fxFlex="22" fxLayoutAlign="center center" class="col wow fadeInRightBig available-on-item" data-wow-duration="1s">
+           <button mat-icon-button color="accent" (click)="downloadAndroid()">
+              <div class="available-on-inner">
+                 <h2>ANDROID</h2>
+              </div>
+              <img  src="assets/images/android.png">
+           </button>
+        </div>
+     </div>
+  </div>
+</section>

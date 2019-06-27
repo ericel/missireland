@@ -1,0 +1,164 @@
+/* For use in src/lib/core/theming/_palette.scss */
+$mat-primary: (
+    50 : #e2eaf2,
+    100 : #b6cbdf,
+    200 : #85a9ca,
+    300 : #5487b4,
+    400 : #306da4,
+    500 : #0b5394,
+    600 : #0a4c8c,
+    700 : #084281,
+    800 : #063977,
+    900 : #032965,
+    A100 : #95b6ff,
+    A200 : #6294ff,
+    A400 : #2f71ff,
+    A700 : #155fff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+$mat-warn: (
+    50 : #fee0e0,
+    100 : #fcb3b3,
+    200 : #fb8080,
+    300 : #f94d4d,
+    400 : #f72626,
+    500 : #f60000,
+    600 : #f50000,
+    700 : #f30000,
+    800 : #f20000,
+    900 : #ef0000,
+    A100 : #ffffff,
+    A200 : #ffe3e3,
+    A400 : #ffb0b0,
+    A700 : #ff9696,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$mat-accent: (
+    50 : #e9f7e3,
+    100 : #c8ebb9,
+    200 : #a4de8b,
+    300 : #80d15c,
+    400 : #64c739,
+    500 : #49bd16,
+    600 : #42b713,
+    700 : #39ae10,
+    800 : #31a60c,
+    900 : #219806,
+    A100 : #ccffc4,
+    A200 : #a0ff91,
+    A400 : #74ff5e,
+    A700 : #5eff45,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+// mandatory stuff for theming
+$template-primary: mat-palette($mat-primary);
+$template-accent:  mat-palette($mat-accent);
+$template-warn:  mat-palette($mat-warn);
+// include the custom theme components into a theme object
+$template-theme: mat-light-theme($template-primary, $template-accent, $template-warn);
+
+$primary-dark: darken( map-get($mat-primary, 500), 8% );
+
+// include the custom theme object into the angular material theme
+.template-blue {
+    @include angular-material-theme($template-theme);
+    
+    .mat-bg-primary,
+    .topbar,
+    .chats-wrap .conversations-hold .single-conversation.me .conversation-msg,
+    .ngx-datatable .datatable-footer .datatable-pager .pager .pages.active a,
+    .fileupload-drop-zone.dz-file-over,
+    .toolbar-avatar.online > .status-dot,
+    .cal-open-day-events,
+    div.hopscotch-bubble {
+        background: map-get($mat-primary, 500) !important;
+        color: #ffffff !important;
+    }
+    .mat-bg-primary-dark {
+        background: map-get($mat-primary, 900) !important;
+        color: #ffffff !important;
+    }
+    .mat-color-primary {
+        color: map-get($mat-primary, 500) !important;
+    }
+
+
+    .topnav ul.menu > li > div.open > a,
+    .topnav ul.menu > li > div.open > div,
+    .sidebar-panel .sidebar-list-item.open > .mat-list-item-content > .sub-menu,
+    .sidenav-hold .sidenav li.open a .mat-icon:not(.menu-caret),
+    .list-item-active {
+        border-color: map-get($mat-primary, 500) !important;
+    }
+
+    .default-bg {
+        background: #ffffff !important;
+    }
+  
+  
+    .mat-bg-accent {
+        background-color: map-get($mat-accent, 500);
+        color: black;
+    }
+    .mat-bg-warn {
+        background-color: map-get($mat-warn, 500);
+        color: white;
+    }
+    .mat-color-accent {
+        color: map-get($mat-accent, 500);
+    }
+    .mat-color-warn {
+        color: map-get($mat-warn, 500);
+    }
+    .mat-color-default {
+        color: rgba(0, 0, 0, 0.87);
+    }
+}

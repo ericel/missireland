@@ -1,0 +1,34 @@
+<div class="header-tip">
+      <div class="container socials">
+            <ul>
+               <li><a href="" class="social-icon linkedin"></a></li>
+               <li><a href="" class="social-icon twitter"></a></li>
+               <li><a href="" class="social-icon facebook"></a></li>
+            </ul>
+         </div>
+</div>
+<header class="home-header" [ngClass]="{'header-fixed': isFixedHeader}" id="home">
+    <div class="container" fxLayout="row wrap" fxLayoutAlign="start center">
+       <div class="header-mobile-top" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="start center">
+          <div class="home-logo mr-1">
+             <a routerLink="/" *ngIf="!isFixedHeader" scrollTo="home"><img src="assets/images/logo.jpg" alt="Miss Bronze and Ireland"></a>
+             <a routerLink="/" *ngIf="isFixedHeader" scrollTo="home"><img src="assets/images/logo.jpg" alt="Miss Bronze and Ireland"></a>
+          </div>
+          <button mat-icon-button id="menu-toggle" (click)="toggleMenu()">
+             <mat-icon>menu</mat-icon>
+          </button>
+       </div>
+       <div fxFlex class="top-menu">
+          <span fxFlex></span>
+          <button mat-button id="dashboard-topbtn" class="hometop-btn" [scrollTo]="'about-section'"><strong>About Us</strong></button>
+          <button mat-button id="dashboard-topbtn" class="hometop-btn" [routerLink]="['/shop']" routerLinkActive="router-link-active" ><strong>Shop</strong></button>
+          <button mat-button id="dashboard-topbtn" class="hometop-btn" [scrollTo]="'service-section'"><strong>Services</strong></button>
+          <button mat-button id="dashboard-topbtn" class="hometop-btn" [scrollTo]="'testimonials-section'"><strong>Testimonials</strong></button>
+          <button mat-button id="dashboard-topbtn" class="hometop-btn" [scrollTo]="'contact-section'"><strong>Contact</strong></button>
+          <button mat-button color="accent" id="dashboard-topbtn" class="hometop-btn icon-button" [routerLink]="['/donate']" routerLinkActive="router-link-active"  >
+             <mat-icon>bookmark</mat-icon>
+             <strong>Donate</strong>
+          </button>
+       </div>
+    </div>
+ </header>
