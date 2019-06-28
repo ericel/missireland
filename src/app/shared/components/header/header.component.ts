@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding, HostListener, Inject } from '@angular/core';
+import { Component, OnInit, HostBinding, HostListener, Inject, Input } from '@angular/core';
 import { WINDOW } from '../../services/windows.service';
 import { DOCUMENT } from '@angular/common';
 
@@ -8,8 +8,9 @@ import { DOCUMENT } from '@angular/common';
   styles: []
 })
 export class HeaderComponent implements OnInit {
+  @Input() sizeLogo;
   isFixedHeader;
-
+   
   @HostBinding('class.menu-opened') menuOpened = false;
 
   constructor(
@@ -18,6 +19,7 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
   }
 
   @HostListener('window:scroll', [])
