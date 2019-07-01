@@ -250,7 +250,11 @@
       background-repeat: no-repeat;
     }
   }
-
+@media (max-width: 1440px) {
+  .full-slide {
+    margin-top: -30px !important;
+  }
+}
   @media (max-width: 600px){
     .p-5 { padding: 5rem 2rem 5rem 2rem !important}
     .slider-content .container h1 {

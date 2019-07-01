@@ -24,7 +24,7 @@ export class AppHomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.title.setTitle('Angular Template Blue');
+    this.title.setTitle('Miss Bronze and Gold Ireland');
   }
 
 }

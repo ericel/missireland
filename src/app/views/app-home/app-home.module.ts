@@ -19,6 +19,7 @@ import { PurchaseSectionComponent } from './home-sections/purchase-section/purch
 import { AvailableonSectionComponent } from './home-sections/availableon-section/availableon-section.component';
 import { ContactSectionComponent } from './home-sections/contact-section/contact-section.component';
 import { TestimonialsSectionComponent } from './home-sections/testimonials-section/testimonials-section.component';
+import { HomeGalleryComponent } from './home-sections/home-gallery/home-gallery.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { TestimonialsSectionComponent } from './home-sections/testimonials-secti
     PurchaseSectionComponent,
     AvailableonSectionComponent,
     ContactSectionComponent,
-    TestimonialsSectionComponent
+    TestimonialsSectionComponent,
+    HomeGalleryComponent
   ],
   imports: [
     CommonModule,

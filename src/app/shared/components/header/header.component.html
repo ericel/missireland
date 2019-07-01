@@ -18,17 +18,27 @@
              <mat-icon>menu</mat-icon>
           </button>
        </div>
-       <div fxFlex class="top-menu">
+       <div fxFlex class="top-menu" *ngIf="typehead === 'home'">
           <span fxFlex></span>
           <button mat-button id="dashboard-topbtn" class="hometop-btn" [scrollTo]="'about-section'"><strong>About Us</strong></button>
-          <button mat-button id="dashboard-topbtn" class="hometop-btn" [routerLink]="['/shop']" routerLinkActive="router-link-active" ><strong>Shop</strong></button>
           <button mat-button id="dashboard-topbtn" class="hometop-btn" [scrollTo]="'service-section'"><strong>Contestants</strong></button>
           <button mat-button id="dashboard-topbtn" class="hometop-btn" [scrollTo]="'testimonials-section'"><strong>Gallery</strong></button>
           <button mat-button id="dashboard-topbtn" class="hometop-btn" [scrollTo]="'contact-section'"><strong>Contact</strong></button>
-          <button mat-raised-button color="accent" id="dashboard-topbtn" class="hometop-btn icon-button" [routerLink]="['/donate']" routerLinkActive="router-link-active"  >
+          <button mat-raised-button color="accent" id="dashboard-topbtn" class="hometop-btn icon-button" [routerLink]="['/register']" routerLinkActive="router-link-active"  >
              <mat-icon>bookmark</mat-icon>
-             <strong>Donate</strong>
+             <strong>Register</strong>
           </button>
        </div>
+       <div fxFlex class="top-menu" *ngIf="typehead === 'other'">
+            <span fxFlex></span>
+            <button mat-button id="dashboard-topbtn" class="hometop-btn" [routerLink]="['/about']" routerLinkActive="router-link-active" ><strong>About Us</strong></button>
+            <button mat-button id="dashboard-topbtn" [routerLink]="['/']" routerLinkActive="router-link-active" ><strong>Contestants</strong></button>
+            <button mat-button id="dashboard-topbtn" class="hometop-btn" [routerLink]="['/']" routerLinkActive="router-link-active" ><strong>Gallery</strong></button>
+            <button mat-button id="dashboard-topbtn" class="hometop-btn" [routerLink]="['/contact']" routerLinkActive="router-link-active" ><strong>Contact</strong></button>
+            <button mat-raised-button color="accent" id="dashboard-topbtn" class="hometop-btn icon-button" [routerLink]="['/register']" routerLinkActive="router-link-active"  >
+               <mat-icon>bookmark</mat-icon>
+               <strong>Register</strong>
+            </button>
+         </div>
     </div>
  </header>

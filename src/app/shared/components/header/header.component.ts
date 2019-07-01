@@ -2,6 +2,7 @@ import { Component, OnInit, HostBinding, HostListener, Inject, Input } from '@an
 import { WINDOW } from '../../services/windows.service';
 import { DOCUMENT } from '@angular/common';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,6 +10,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class HeaderComponent implements OnInit {
   @Input() sizeLogo;
+  @Input() typehead;
   isFixedHeader;
    
   @HostBinding('class.menu-opened') menuOpened = false;
@@ -19,7 +21,7 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    console.log(this.typehead);
   }
 
   @HostListener('window:scroll', [])

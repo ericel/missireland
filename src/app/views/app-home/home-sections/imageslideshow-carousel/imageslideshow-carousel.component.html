@@ -5,23 +5,7 @@
             <div class=" slider-overlay"></div>
             <div class="pt-carousel"></div>
             <div class="container pb-3" fxLayout="row" fxLayout.lt-md="column" fxLayoutWrap="nowrap" fxLayoutGap="30px">
-               <mat-card *ngIf="item.type === 'full'" class="full-slide mat-elevation-z4 p-1 w-100">
-                  <ngu-carousel class="slider" #myCarousel [inputs]="carouselOptions2" [dataSource]="slidesImages">
-                     <ngu-tile *nguCarouselDef="let item; let i = index; let ani = animate" [@slider]="ani">
-                        <div class="slider-bg" [ngStyle]="{ 'background-image': 'url(' + item + ')'}">
-                           <div class="slider-content">
-                              <!--<div class="mat-bg-primary slider-overlay"></div>-->
-                              <div class="pt-carousel"></div>
-                              </div>
-                              </div>
-                     </ngu-tile>
-                     <ul class="myPoint" NguCarouselPoint>
-                           <li *ngFor="let i of myCarousel.pointNumbers; let i = index" class="mat-bg-primary"
-                              [class.active]="i==myCarousel.activePoint" (click)="myCarousel.moveTo(i)"
-                              [style.background]="'url(' + items[i] + ')'"></li>
-                        </ul>
-                  </ngu-carousel>
-               </mat-card>
+               
                <mat-card *ngIf="item.type === 'grid'" class="full-slide p-5" fxLayout="row" fxLayout.lt-md="column" fxLayoutWrap="nowrap" fxLayoutGap="30px">
                   <div fxFlex="60" fxLayout.lt-sm="column">
                      <h1 class="home-intro-title" data-wow-delay="0.5s" class="col wow bounce">{{item.title}}</h1>

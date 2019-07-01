@@ -8,13 +8,18 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'shop',
-    loadChildren: './views/app-shop/app-shop.module#AppShopModule',
+    path: 'register',
+    loadChildren: './views/app-register/app-register.module#AppRegisterModule',
     pathMatch: 'full'
   },
   {
-    path: 'donate',
-    loadChildren: './views/app-donate/app-donate.module#AppDonateModule',
+    path: 'about',
+    loadChildren: './views/app-about/app-about.module#AppAboutModule',
+    pathMatch: 'full'
+  },
+  {
+    path: 'contact',
+    loadChildren: './views/app-contact/app-contact.module#AppContactModule',
     pathMatch: 'full'
   }
 ];
