@@ -16,15 +16,15 @@ export class ImageslideshowCarouselComponent implements OnInit {
   {
     icon: 'pages',
     image: 'assets/images/slides/slide1-slides/slide1.jpg',
-    text: `Meet Our Reigning Queen!`,
-    title: 'Meet Queen Maria Boons from Cambodia. Our Reigning Queen - Miss Bronze Ireland 2019',
-    subtitle: 'We celebrate our queens, we celebrate beauty.',
+    text: `Meet our reigning queen!`,
+    title: 'Meet queen Cynthia Anaba from Nigeria',
+    subtitle: 'After being crowned Miss Bronze and Gold Ireland 2014 did her first placement with Dress for Success, which is a community organization empowering women to achieve economic independence.',
     actions: [
       {
         action: 'Learn More',
         state: 'contact-section',
         color: 'primary',
-        icon: 'phone',
+        icon: 'info',
         link: '#'
       }
     ],
@@ -47,6 +47,7 @@ export class ImageslideshowCarouselComponent implements OnInit {
     ],
     type: 'grid'
   },
+  /*
   {
     icon: 'dashboard',
     image: 'assets/images/slides/slide1.jpg',
@@ -70,6 +71,7 @@ export class ImageslideshowCarouselComponent implements OnInit {
     ],
     type: 'full'
   }
+  */
 ]
 
 public slidesImages = [
@@ -95,7 +97,7 @@ ngOnInit() {
     },
     load: 2,
     touch: true,
-    loop: false
+    loop: true
   }
 
   this.carouselOptions2 = {

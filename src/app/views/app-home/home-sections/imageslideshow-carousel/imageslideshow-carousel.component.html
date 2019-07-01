@@ -6,9 +6,9 @@
             <div class="pt-carousel"></div>
             <div class="container pb-3" fxLayout="row" fxLayout.lt-md="column" fxLayoutWrap="nowrap" fxLayoutGap="30px">
                <mat-card *ngIf="item.type === 'full'" class="full-slide mat-elevation-z4 p-1 w-100">
-                  <ngu-carousel class="slider-1" #myCarousel [inputs]="carouselOptions2" [dataSource]="slidesImages">
+                  <ngu-carousel class="slider" #myCarousel [inputs]="carouselOptions2" [dataSource]="slidesImages">
                      <ngu-tile *nguCarouselDef="let item; let i = index; let ani = animate" [@slider]="ani">
-                        <div class="slider-bg-1" [ngStyle]="{ 'background-image': 'url(' + item + ')'}">
+                        <div class="slider-bg" [ngStyle]="{ 'background-image': 'url(' + item + ')'}">
                            <div class="slider-content">
                               <!--<div class="mat-bg-primary slider-overlay"></div>-->
                               <div class="pt-carousel"></div>

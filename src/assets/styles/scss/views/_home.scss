@@ -234,4 +234,64 @@
 }
 
 /* ========= Testimonails Section ========== */
+.service-carousel{
+    width: 100%;
+    position: relative;
+    
+    .myPoint {
+        position: relative !important;
+    }
+    .test-c-left {
+        position: absolute !important;
+        left: 0px;
+        top: 30%;
+        
+    }
+    .test-c-right {
+        position: absolute !important;
+        right: 0px;
+        top: 30%;
+        z-index: 99;
+    }
+    .tile{
+        box-shadow: none !important;
+    }
+    .item { 
+        .mat-card {
+          margin: 0 4px !important;
+          .mat-card-content {
+            position: relative;
+            padding: 2rem;
+            min-height: 150px;
+           // max-height: 200px; // Adjust height as your need
+          }
+          .company-logo {
+           padding-bottom: 24px;
+          }
+        
+          .user-detail {
+            position: absolute;
+            bottom: 5px;
+            left: 32px;
+            right: 0;
+            margin: auto;
+            color: #ffffff;
+            font-weight: bold;
+            .user-photo {
+              float: left;
+              margin-right: 8px;
+            }
+            .user-title {
+              font-size: 1rem;
+              float: left;
+            }
+            .user-subtitle {
+              float: left;
+              color: #ffffff !important;
+            }
+          }
+          
+        }
+      }
 
+}
