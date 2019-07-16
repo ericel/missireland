@@ -55,6 +55,10 @@ export class ServicesSectionComponent implements OnInit {
     photo: 'assets/images/contestants/contest11.jpg',
     name: 'Jessica Hiche',
     country: 'Ghana'
+  }, {
+    photo: 'assets/images/contestants/contest12.jpg',
+    name: 'Jessica Hiche',
+    country: 'Ghana'
   }];
   constructor() { }
   ngOnInit() {
