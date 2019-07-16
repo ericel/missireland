@@ -5,7 +5,13 @@ import { slider } from 'src/app/shared/animations/slider.animations';
 @Component({
   selector: 'app-home-gallery',
   templateUrl: './home-gallery.component.html',
-  styles: [],
+  styles: [
+    `
+    .gallery img{
+      max-height: 350px !important;
+    }
+    `
+  ],
   animations: [slider],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -16,8 +22,13 @@ export class HomeGalleryComponent implements OnInit {
     'assets/images/slides/slide1-slides/slide2.jpg',
     'assets/images/slides/slide1-slides/slide3.jpg',
     'assets/images/slides/slide1-slides/slide4.jpg',
-    'assets/images/slides/slide1-slides/slide4.jpg',
-    'assets/images/slides/slide1-slides/slide5.jpg'
+    'assets/images/slides/slide1-slides/slide5.jpg',
+    'assets/images/slides/slide1-slides/slide6.jpg',
+    'assets/images/slides/slide1-slides/slide7.jpg',
+    'assets/images/slides/slide1-slides/slide8.jpg',
+    'assets/images/slides/slide1-slides/slide9.jpg',
+    'assets/images/slides/slide1-slides/slide10.jpg',
+    'assets/images/slides/slide1-slides/slide11.jpg'
   ]
   
   constructor() { }

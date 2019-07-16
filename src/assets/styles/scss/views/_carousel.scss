@@ -268,3 +268,12 @@
     height: 80%;
   }
   }
+.full-slide-gallery {
+  //max-height: 550px;
+  //overflow: hidden;
+
+  .slider-bg{
+    background-size:cover!important;
+    //height: inherit !important;
+  }
+}

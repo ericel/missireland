@@ -1,4 +1,4 @@
-<div class="container mb-2">
+<div class="container mb-2 gallery">
     <h3 class="section-title" data-wow-delay="0.5s" class="col wow bounce">
         Gallery - Miss Bronze and Gold Ireland
      </h3>
@@ -9,6 +9,7 @@
              <div class="slider-content">
                 <!--<div class="mat-bg-primary slider-overlay"></div>-->
                 <div class="pt-carousel"></div>
+           
                 </div>
                 </div>
        </ngu-tile>
@@ -17,6 +18,12 @@
                 [class.active]="i==myCarousel.activePoint" (click)="myCarousel.moveTo(i)"
                 [style.background]="'url(' + slidesImages[i] + ')'"></li>
           </ul>
+          <button mat-fab color="primary" NguCarouselPrev class="leftRs" [style.opacity]="myCarousel.isFirst ? 0.5:1">
+            <mat-icon>keyboard_arrow_left</mat-icon>
+         </button>
+         <button mat-fab color="primary" NguCarouselNext class="rightRs" [style.opacity]="myCarousel.isLast ? 0.5:1">
+            <mat-icon>keyboard_arrow_right</mat-icon>
+         </button>
     </ngu-carousel>
   </mat-card>
 </div>

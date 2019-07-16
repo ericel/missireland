@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { NotfoundComponent } from './views/notfound/notfound.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,11 @@ const routes: Routes = [
   {
     path: 'contact',
     loadChildren: './views/app-contact/app-contact.module#AppContactModule',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    component: NotfoundComponent,
     pathMatch: 'full'
   }
 ];

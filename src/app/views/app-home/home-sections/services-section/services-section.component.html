@@ -14,13 +14,13 @@ It is very inclusive and everyone is welcome to participate regardless of your n
          <ngu-tile *nguCarouselDef="let item; let i = index; let ani = animate" [@slider]="ani" > <!--  PLease this animation to this tile to see animation. stackblitz have error with animations -->
          <mat-card class="p-1 mat-elevation-z8">
             <mat-card-content class="p-0">
-               <img   [src]="item.photo">
+               <img class="w-100"  [src]="item.photo" [alt]="item.name">
               <!-- <p class="text">{{item.text}}</p>-->
-               <div class="user-detail">
+              <!-- <div class="user-detail">
                   <span class="toolbar-avatar md user-photo"><img [src]="item.photo" alt=""></span>
-                  <span class="user-title mat-color-primary">{{item.name}}</span><br>
+                  <<span class="user-title mat-color-primary">{{item.name}}</span><br>
                   <span class="user-subtitle text-muted">{{item.country}}</span>
-               </div>
+               </div>-->
             </mat-card-content>
          </mat-card>
          </ngu-tile>

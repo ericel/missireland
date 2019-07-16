@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.typehead);
+    
   }
 
   @HostListener('window:scroll', [])

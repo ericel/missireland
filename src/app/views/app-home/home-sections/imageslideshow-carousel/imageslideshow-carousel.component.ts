@@ -33,13 +33,13 @@ export class ImageslideshowCarouselComponent implements OnInit {
   {
     icon: 'send',
     image: 'assets/images/slides/slide3.jpg',
-    text: `Audition and training will take place on Sunday 7th July 2019. `,
-    title: 'What we do - Miss Bronze and Gold Ireland empowers young women of all nationalities.. ',
-    subtitle: 'Living in Ireland? You can become the next queen!',
+    text: `Sunday 7th July 2019. `,
+    title: 'Miss Bronze and Gold Ireland empowers young women ',
+    subtitle: 'Auditions, Living in Ireland? You can become the next queen! It is a beauty pageant with no weight, height or nationality restrictions.',
     actions: [
       {
         action: 'Register Now',
-        state: 'testimonials-section',
+        state: 'purchase-section',
         color: 'accent',
         icon: 'comment',
         link: '#'

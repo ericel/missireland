@@ -17,7 +17,6 @@ import { AboutSectionComponent } from './home-sections/about-section/about-secti
 import { ServicesSectionComponent } from './home-sections/services-section/services-section.component';
 import { PurchaseSectionComponent } from './home-sections/purchase-section/purchase-section.component';
 import { AvailableonSectionComponent } from './home-sections/availableon-section/availableon-section.component';
-import { ContactSectionComponent } from './home-sections/contact-section/contact-section.component';
 import { TestimonialsSectionComponent } from './home-sections/testimonials-section/testimonials-section.component';
 import { HomeGalleryComponent } from './home-sections/home-gallery/home-gallery.component';
 
@@ -30,7 +29,6 @@ import { HomeGalleryComponent } from './home-sections/home-gallery/home-gallery.
     ServicesSectionComponent,
     PurchaseSectionComponent,
     AvailableonSectionComponent,
-    ContactSectionComponent,
     TestimonialsSectionComponent,
     HomeGalleryComponent
   ],
@@ -45,10 +43,10 @@ import { HomeGalleryComponent } from './home-sections/home-gallery/home-gallery.
     MatIconModule,
     MatFormFieldModule,
     MatDividerModule,
-    MatInputModule,
     FlexLayoutModule,
     NguCarouselModule,
-    NgwWowModule
+    NgwWowModule,
+  
   ]
 })
 export class AppHomeModule { }

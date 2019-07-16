@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-app-about',
@@ -31,9 +32,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppAboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private title: Title,
+    private meta: Meta
+  ) { }
 
   ngOnInit() {
+    this.title.setTitle('About Us');
+    this.meta.addTags([
+      { name: 'description', content: 'Miss Bronze and Gold Ireland is one of the Largest multicultural pageant in Ireland!' },
+      { property: 'og:site_name', content: 'Miss Bronze and Gold Ireland' },
+      { property: 'og:title', content: 'About Us' },
+      { property: 'og:description', content: 'Miss Bronze and Gold Ireland is one of the Largest multicultural pageant in Ireland!' },
+      { property: 'og:image', content: 'https://missbronzeandgoldireland.com/assets/images/logo.jpg' },
+      { property: 'og:url', content: `https://missbronzeandgoldireland.com/about` }
+    ]);
   }
 
 }

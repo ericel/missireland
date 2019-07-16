@@ -8,17 +8,25 @@ import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { NotfoundComponent } from './views/notfound/notfound.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotfoundComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'missireland' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    AngularFireModule.initializeApp(environment.firebase, 'missireland'),
+    AngularFirestoreModule, 
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

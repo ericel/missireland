@@ -43,19 +43,31 @@ export class ServicesSectionComponent implements OnInit {
     photo: 'assets/images/contestants/contest8.jpg',
     name: 'Jessica Hiche',
     country: 'Ghana'
+  },{
+    photo: 'assets/images/contestants/contest9.jpg',
+    name: 'Adam Smith',
+    country: 'Nigeria'
+  }, {
+    photo: 'assets/images/contestants/contest10.jpg',
+    name: 'Helena White',
+    country: 'Uganda'
+  }, {
+    photo: 'assets/images/contestants/contest11.jpg',
+    name: 'Jessica Hiche',
+    country: 'Ghana'
   }];
   constructor() { }
   ngOnInit() {
     this.carouselOptions = {
-      grid: { xs: 1, sm: 1, md: 1, lg: 4, all: 0 },
-      slide: 2,
+      grid: { xs: 1, sm: 1, md: 2, lg: 4, all: 0 },
+      //slide: 1,
       speed: 400,
       interval: { timing: 4000 },
       animation: 'lazy',
       point: {
         visible: true
       },
-      load: 2,
+      //load: 2,
       touch: true,
       loop: true
     };
